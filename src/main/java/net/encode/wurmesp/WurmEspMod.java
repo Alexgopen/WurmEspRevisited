@@ -16,7 +16,6 @@ import com.wurmonline.client.game.NearTerrainDataBuffer;
 import com.wurmonline.client.renderer.PickRenderer;
 import com.wurmonline.client.renderer.gui.HeadsUpDisplay;
 
-import net.encode.wurmesp.feature.FeatureFlowerTiles;
 import net.encode.wurmesp.feature.FeatureTilesCloseBy;
 import net.encode.wurmesp.feature.FeatureTilesHighlight;
 import net.encode.wurmesp.feature.FeatureTilesWalkable;
@@ -48,7 +47,6 @@ Configurable {
     public static CronoManager tilesHighlightCronoManager;
     public static CronoManager tilesCloseByWalkableCronoManager;
     public static FeatureXRay xrayManager;
-    public static FeatureFlowerTiles tilesFlowerManager;
     public static FeatureTilesCloseBy tilesCloseByManager;
     public static FeatureTilesHighlight tilesHighlightManager;
     public static FeatureTilesWalkable tilesCloseByWalkableManager;
@@ -96,7 +94,6 @@ Configurable {
     public void init() {
         logger.log(Level.INFO, "[WurmEspMod] Initializing");
         xrayManager = new FeatureXRay();
-        tilesFlowerManager = new FeatureFlowerTiles();
         tilesCloseByManager = new FeatureTilesCloseBy();
         tilesHighlightManager = new FeatureTilesHighlight();
         tilesCloseByWalkableManager = new FeatureTilesWalkable();

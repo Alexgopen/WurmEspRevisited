@@ -69,19 +69,6 @@ extends Hook {
                 tilesWalkableThread.setPriority(10);
                 tilesWalkableThread.start();
             }
-            if (WurmEspMod.tilesFlower && world.getPlayer().getPos().getLayer() >= 0) {
-                WurmEspMod.tilesFlowerManager.setWorldQueue(world, queuePick);
-                if (WurmEspMod.tilesFlowerManager.first) {
-                    WurmEspMod.tilesFlowerManager.refresh();
-                    WurmEspMod.tilesFlowerManager.first = false;
-                } else if (WurmEspMod.tilesFlowerCronoManager.hasEnded()) {
-                    WurmEspMod.tilesFlowerManager.refresh();
-                    WurmEspMod.tilesFlowerCronoManager.restart(1000L);
-                }
-                Thread tilesFlowerThread = new Thread(() -> WurmEspMod.tilesFlowerManager.queue());
-                tilesFlowerThread.setPriority(10);
-                tilesFlowerThread.start();
-            }
             if (WurmEspMod.xray && world.getPlayer().getPos().getLayer() < 0) {
                 Thread refreshThread;
                 WurmEspMod.xrayManager.setWorldQueue(world, queuePick);
